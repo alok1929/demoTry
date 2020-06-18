@@ -1,0 +1,34 @@
+import java.util.*;
+public class buble1
+{
+	public static void main()
+	{
+		System.out.println("enter the number of  elements:");
+		Scanner ss=new Scanner(System.in);
+		int n=ss.nextInt();
+		int m[]=new int[n];
+		System.out.println("enter these elements:");
+		int i,j,tmp=0;
+		for(i=0;i<n;i++)
+		{
+			m[i]=ss.nextInt();
+		}
+		for(i=0;i<n;i++)
+		{
+			for(j=0;j<n-i-1;j++)
+			{
+				if(m[j]>m[j+1])
+				{
+					tmp=m[j];
+					m[j]=m[j+1];
+					m[j+1]=tmp;
+				}
+			}
+		}
+		System.out.println("the new order of elements:");
+		for(i=0;i<n;i++)
+		{
+			System.out.println(m[i] + "\t");
+		}
+	}
+}
